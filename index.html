@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinRewards - Coming Soon</title>
+    <title>CoinRewards - Earn Rewards</title>
     <style>
         * {
             margin: 0;
@@ -23,6 +23,7 @@
         }
         .container {
             max-width: 600px;
+            width: 100%;
             background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 15px;
@@ -40,6 +41,16 @@
             color: #cccccc;
             margin-bottom: 25px;
             line-height: 1.6;
+        }
+        .referral-box {
+            background: rgba(255, 204, 0, 0.1);
+            border: 1px dashed #ffcc00;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            font-weight: bold;
+            display: none; /* Pehle chup rahega, referral hone par dikhega */
         }
         .btn {
             display: inline-block;
@@ -61,10 +72,29 @@
 
     <div class="container">
         <h1>CoinRewards</h1>
-        <p>Hamari nayi websiteee jaldi hi live hone wali hai! Yahan aapko behtareen rewards aur updates milenge. Saath bane rahiye.</p>
+        
+        <!-- Referral Message Box -->
+        <div id="ref-alert" class="referral-box">
+            🎉 Aapko <span id="ref-name"></span> ki taraf se special invite mila hai!
+        </div>
+
+        <p>Hamari nayi app aur website jaldi hi live hone wali hai! Yahan aapko behtareen rewards aur offers milenge.</p>
         <a href="#" class="btn">Coming Soon</a>
     </div>
 
+    <script>
+        // URL se referral code pakadne ka code (Jaise: ?ref=jgfhhb)
+        const urlParams = new URLSearchParams(window.location.search);
+        const refCode = urlParams.get('ref');
+
+        if (refCode) {
+            const refAlert = document.getElementById('ref-alert');
+            const refName = document.getElementById('ref-name');
+            
+            refName.innerText = refCode; // Code ko display par dikhayega
+            refAlert.style.display = 'block'; // Box ko show kar dega
+        }
+    </script>
+
 </body>
 </html>
-
