@@ -1,104 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinRewards - Earn Rewards</title>
-    
-    <!-- Adsterra Popunder Ad Script -->
-    <script data-cfasync="false" src="https://ahuramazda.org/1/da1e9ec68893a06517bb877b2053afb6"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoinRewards - Earn Rewards</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-            color: #ffffff;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #ffcc00;
-        }
-        p {
-            font-size: 1.1rem;
-            color: #cccccc;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-        .referral-box {
-            background: rgba(255, 204, 0, 0.1);
-            border: 1px dashed #ffcc00;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            color: #ffcc00;
-            font-weight: bold;
-            display: none;
-        }
-        .btn {
-            display: inline-block;
-            background: #ffcc00;
-            color: #1e1e2f;
-            padding: 12px 30px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: 0.3s ease;
-        }
-        .btn:hover {
-            background: #e6b800;
-            transform: translateY(-2px);
-        }
-    </style>
+<!-- Adsterra Popunder -->
+<script data-cfasync="false"
+src="https://ahuramazda.org/1/da1e9ec68893a06517bb877b2053afb6"></script>
+
+<!-- Adsterra Social Bar -->
+<script data-cfasync="false"
+src="https://brijmohan.org/14/089be49df7eb3e55964c89582d31e8c6"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.referral-box {
+    background: rgba(255, 204, 0, 0.1);
+    border: 1px dashed #ffcc00;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    font-weight: bold;
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1e1e2f;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+/* Ad containers */
+.ad-box {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ad-label {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.ad-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.ad-banner iframe {
+    max-width: 100%;
+}
+
+.smartlink-btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1e1e2f;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 22px 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>CoinRewards</h1>
-        
-        <!-- Referral Message Box -->
-        <div id="ref-alert" class="referral-box">
-            🎉 Aapko <span id="ref-name"></span> ki taraf se special invite mila hai!
-        </div>
+<div class="container">
+    <h1>CoinRewards</h1>
 
-        <p>Hamari nayi app aur website jaldi hi live hone wali hai! Yahan aapko behtareen rewards aur offers milenge.</p>
-        <a href="#" class="btn">Coming Soon</a>
+    <div id="ref-alert" class="referral-box">
+        🎉 Aapko <span id="ref-name"></span> ki taraf se special invite mila hai!
     </div>
 
-    <script>
-        // URL se referral code pakadne ka code
-        const urlParams = new URLSearchParams(window.location.search);
-        const refCode = urlParams.get('ref');
+    <p>
+        Hamari nayi app aur website jaldi hi live hone wali hai!
+        Yahan aapko behtareen rewards aur offers milenge.
+    </p>
 
-        if (refCode) {
-            const refAlert = document.getElementById('ref-alert');
-            const refName = document.getElementById('ref-name');
-            
-            refName.innerText = refCode;
-            refAlert.style.display = 'block';
-        }
-    </script>
+    <a href="#" class="btn">Coming Soon</a>
+</div>
+
+<!-- Smartlink -->
+<div class="ad-box">
+    <div class="ad-label">Sponsored · Smartlink</div>
+    <a class="smartlink-btn"
+       href="https://asiaso.org/4/90584981b4b2282515b089310f2d8495"
+       target="_blank"
+       rel="noopener noreferrer">
+       Visit Sponsored Offer
+    </a>
+</div>
+
+<!-- Native Banner -->
+<div class="ad-box">
+    <div class="ad-label">Sponsored · Native Banner</div>
+    <script async="async" data-cfasync="false"
+    src="https://brijmohan.org/21/e47fc958d5b2795e5f514c6e0bc2cb1e"></script>
+    <div id="container-e47fc958d5b2795e5f514c6e0bc2cb1e"></div>
+</div>
+
+<!-- Banner 468x60 -->
+<div class="ad-box">
+    <div class="ad-label">Sponsored · Banner 468×60</div>
+    <div class="ad-banner">
+        <script>
+        atOptions = {
+            'key': '39b83322e886c0ecd660b0ae57a5c076',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
+        };
+        </script>
+        <script src="https://brijmohan.org/22/39b83322e886c0ecd660b0ae57a5c076"></script>
+    </div>
+</div>
+
+<!-- Banner 728x90 -->
+<div class="ad-box">
+    <div class="ad-label">Sponsored · Banner 728×90</div>
+    <div class="ad-banner">
+        <script>
+        atOptions = {
+            'key': 'a8975f62efd1da2a86411ecd0616b44f',
+            'format': 'iframe',
+            'height': 90,
+            'width': 728,
+            'params': {}
+        };
+        </script>
+        <script src="https://brijmohan.org/22/a8975f62efd1da2a86411ecd0616b44f"></script>
+    </div>
+</div>
+
+<!-- Banner 300x250 -->
+<div class="ad-box">
+    <div class="ad-label">Sponsored · Banner 300×250</div>
+    <div class="ad-banner">
+        <script>
+        atOptions = {
+            'key': '162adee043ae3717dfd55c90fa401923',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
+        };
+        </script>
+        <script src="https://brijmohan.org/22/162adee043ae3717dfd55c90fa401923"></script>
+    </div>
+</div>
+
+<script>
+// Referral code
+const urlParams = new URLSearchParams(window.location.search);
+const refCode = urlParams.get('ref');
+
+if (refCode) {
+    document.getElementById('ref-name').innerText = refCode;
+    document.getElementById('ref-alert').style.display = 'block';
+}
+</script>
 
 </body>
 </html>
