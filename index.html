@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoinRewards - Earn Rewards</title>
+    
+    <!-- Adsterra Popunder Ad Script -->
+    <script data-cfasync="false" src="https://ahuramazda.org/1/da1e9ec68893a06517bb877b2053afb6"></script>
+
     <style>
         * {
             margin: 0;
@@ -50,7 +54,7 @@
             margin-bottom: 20px;
             color: #ffcc00;
             font-weight: bold;
-            display: none; /* Pehle chup rahega, referral hone par dikhega */
+            display: none;
         }
         .btn {
             display: inline-block;
@@ -83,7 +87,7 @@
     </div>
 
     <script>
-        // URL se referral code pakadne ka code (Jaise: ?ref=jgfhhb)
+        // URL se referral code pakadne ka code
         const urlParams = new URLSearchParams(window.location.search);
         const refCode = urlParams.get('ref');
 
@@ -91,8 +95,8 @@
             const refAlert = document.getElementById('ref-alert');
             const refName = document.getElementById('ref-name');
             
-            refName.innerText = refCode; // Code ko display par dikhayega
-            refAlert.style.display = 'block'; // Box ko show kar dega
+            refName.innerText = refCode;
+            refAlert.style.display = 'block';
         }
     </script>
 
